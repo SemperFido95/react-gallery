@@ -1,3 +1,4 @@
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 
 let GalleryList = ({ gallery }) => {
@@ -7,9 +8,10 @@ let GalleryList = ({ gallery }) => {
         <ul>
             {
                 gallery.map((pic) => (
-                    <li key={pic.id}>
-                        <img src={pic.path} />
-                    </li>
+                    <GalleryItem 
+                        pic={pic}
+                        key={pic.id}
+                    />
                 ))
             }
         </ul>
