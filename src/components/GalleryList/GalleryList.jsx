@@ -1,7 +1,7 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 
-let GalleryList = ({ gallery }) => {
+let GalleryList = ({ gallery, getPics }) => {
 
 
     return (
@@ -11,6 +11,7 @@ let GalleryList = ({ gallery }) => {
                     <GalleryItem 
                         pic={pic}
                         key={pic.id}
+                        getPics={getPics}
                     />
                 ))
             }
